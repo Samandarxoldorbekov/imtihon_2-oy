@@ -1,0 +1,22 @@
+ALTER TABLE ning vazifasi yabgli colum qo'shish, bor colum nomini o'zgartishish, yangi colum qo'shish
+uchun ishlatiladi
+
+Alter table uchun misoolar
+
+YANGI COLUM QOSHISHGA MISOL:
+
+ALTER TABLE samandar
+ADD COLUMN ismi varchar(20);
+
+cOLUMNING O'ZGARTISG UCHUB MISOL
+
+ALTER TABLE samandar
+MODIFY COLUMN ismi VARCHAR(200);
+
+COLUMDI UCHIRISH UCHUN MISOL:
+
+ALTER TABLE samandar
+DROP COLUMN ismi;
+
+
+

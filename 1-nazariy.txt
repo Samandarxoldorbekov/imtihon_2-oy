@@ -1,0 +1,31 @@
+JOIN haqida malumot berish
+
+join ning vazifasi ustunlar orasida malumotlarni ulash birlashtirish ,tahrilash filtirlash va
+malumotlarni tahrirlashda ishlatiladi
+JOINING TURLARI
+
+1- INNER JOIN 2 jadvaldai biri biriga mos bo'lgan qiymatlarni qaytarish uchun ishlatiladi
+
+misol :
+SELECT books.title, authors.name
+FROM books
+INNER JOIN authors ON books.author_id = authors.author_id;
+
+2 - Right Join o'ng tomon jadavilini chap tomondigi bilan solishtiradi agar chap tomonda bir xil bo'lmasa NULL qaytaradi
+misol:
+SELECT books.title, authors.name
+FROM books
+INNER JOIN authors ON books.author_id = authors.author_id;
+
+3 LEFT JOIN chap tomon jadvali bilan o'ng tomondi mos keluvchilarni solishtiradi agar o'ng tomonda birxili bo'lmasa NULL qaytaradi
+misl:
+SELECT books.title, authors.name
+FROM books
+LEFT JOIN authors ON books.author_id = authors.author_id;
+
+4 FULL JOin 2ala jadvaldan hama barcha ma'lumotlarni qayatadi agar mos kelmasa NULL qaytaradi
+misol:
+SELECT books.title, authors.name
+FROM books
+FULL JOIN authors ON books.author_id = authors.author_id;
+

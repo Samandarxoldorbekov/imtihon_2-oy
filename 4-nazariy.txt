@@ -1,0 +1,15 @@
+foidalanuvchi so'rov yuborganda to javob olguncha quydigi ishlarni bajaradi
+
+user reques -  yani foidalanuvchi so'rov yuborilish qismi bu yerda foidalanuvchi so'rov yuboradi
+
+URl dispatcher - yani foidalanuvchi yuborgan so'rovga qarab URl dispatcher kerakli Viwe funkisya chaqiradi
+bu qisim asosiy qisimlardan biri sababi bu yerda ma'lumotlar bazasidan malumot olish malumot tahrirlash
+kabi va shunga uxshahashj vazfaslarni bajaradi
+
+Template - bu yerda HTML, CSS ,javacsript kodlarni django qisimlarni birlashtirib bitta tayor HTML sahifaga aytrladi
+
+ketin oxrida HttpResponse- ishlaydi bu foidalanuvchiga ma'lumot uzatish qismi
+
+grafika
+
+user reques --> URL --> VIWE --> HttpResponse

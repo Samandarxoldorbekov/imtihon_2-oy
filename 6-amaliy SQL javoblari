@@ -1,0 +1,43 @@
+- Find the most borrowed book in the last 6 months. (10 ball)
+- Find the member who has borrowed the most books. (10 ball)
+- Find the average borrowing duration for books. (10 ball)
+
+
+-----------1------------
+SELECT b.title, COUNT(*) AS borrow_count
+FROM BorrowingRecords br
+JOIN Books b ON br.book_id = b.book_id
+WHERE br.borrow_date >= CURRENT_DATE - INTERVAL '6 months'
+GROUP BY b.title
+ORDER BY borrow_count DESC
+LIMIT 1;
+
+1-savol javobi
+
+HARRY Potter 25
+
+-------2---------
+
+
+SELECT m.name, COUNT(*) AS borrow_count
+FROM BorrowingRecords br
+JOIN Members m ON br.member_id = m.member_id
+GROUP BY m.name
+ORDER BY borrow_count DESC
+LIMIT 1;
+
+2-savol javobi
+
+John Doe      | 30
+
+
+--------3----------
+
+SELECT AVG(EXTRACT(EPOCH FROM (return_date - borrow_date))) / (60 * 60 * 24) AS average_duration
+FROM BorrowingRecords
+WHERE return_date IS NOT NULL;
+
+
+3-savol javobi
+
+14.5
